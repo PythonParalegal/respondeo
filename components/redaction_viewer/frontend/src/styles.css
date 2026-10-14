@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.redaction-viewer {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.redaction-mark {
+  cursor: pointer;
+  transition: fill 0.15s ease, stroke 0.15s ease;
+}
+
+.redaction-mark:hover {
+  fill: rgba(0, 0, 0, 0.45);
+  stroke-width: 2.5;
+}
+
+.redaction-mark.selected {
+  stroke: #3399ff;
+  stroke-width: 3;
+  stroke-dasharray: 6 3;
+}
+
+.drawing-rect {
+  fill: rgba(255, 0, 0, 0.15);
+  stroke: #cc0000;
+  stroke-width: 2;
+  stroke-dasharray: 8 4;
+  pointer-events: none;
+}
+
+.resize-handle {
+  fill: white;
+  stroke: #3399ff;
+  stroke-width: 1.5;
+}
+
+.tooltip {
+  position: absolute;
+  background: white;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #2d3748;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  pointer-events: none;
+  z-index: 1000;
+  white-space: normal;
+}
+
+.tooltip .reason {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.tooltip .meta {
+  color: #718096;
+  font-size: 12px;
+}
+
+.tooltip .divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 4px 0;
+}
+
+.case-closed-overlay {
+  cursor: not-allowed;
+}

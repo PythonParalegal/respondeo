@@ -1,0 +1,56 @@
+# DIY eDiscovery Hub — Pinned Dependencies
+# Tested on: Python 3.11 (Windows)
+# Last frozen: March 2026 from working production venv
+#
+# IMPORTANT: Do not upgrade packages without testing the full pipeline.
+# Redaction viewer is now a custom component (components/redaction_viewer/).
+
+# ─── Core Framework ──────────────────────────────────────────────────────────
+streamlit==1.55.0
+streamlit-lottie==0.0.5
+
+# ─── Authentication ──────────────────────────────────────────────────────────
+bcrypt==5.0.0
+
+# ─── Data & Search ───────────────────────────────────────────────────────────
+opensearch-py==3.1.0
+pandas==2.3.3
+datasketch==1.9.0
+networkx==3.6.1
+scipy==1.17.1
+plotly>=5.24.0
+
+# ─── Document Extraction & Imaging ───────────────────────────────────────────
+tika==3.1.0
+PyMuPDF==1.27.1
+Pillow==12.1.1
+pytesseract==0.3.13
+pdfkit==1.0.0
+python-docx==1.2.0
+mammoth==1.11.0
+olefile==0.47
+compressed-rtf==1.0.7
+lxml==6.0.2
+
+# ─── Windows Integration ─────────────────────────────────────────────────────
+pywin32==311
+
+# ─── HTTP / API ──────────────────────────────────────────────────────────────
+requests==2.32.5
+
+# ─── Utilities ───────────────────────────────────────────────────────────────
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+openpyxl==3.1.5
+
+# ─── Optional: PST extraction fallback when Outlook COM is unavailable ───────
+# Pre-built wheel for machines without Visual C++ Build Tools is in vendor/wheels/.
+# Install with: pip install vendor/wheels/libpff_python-20231205-cp311-cp311-win_amd64.whl
+libpff-python  # PST extraction fallback — use vendored wheel if pip install fails (requires C build tools)
+
+# ─── Development / Testing ───────────────────────────────────────────────────
+pytest==9.0.2
+
+# ─── E2E Testing (Playwright) ───────────────────────────────────────────────
+playwright==1.52.0
+pytest-playwright==0.7.2

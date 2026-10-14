@@ -1,0 +1,78 @@
+# Machine-local config (copy from config.example.py)
+config.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js (component builds)
+node_modules/
+
+# FUSE filesystem artifacts (WSL/Docker — deleted files with open handles)
+.fuse_hidden*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.exe
+
+# Credentials and secrets
+credentials.txt
+auth_config.yaml
+
+# Mac OS
+.DS_Store
+
+# Temporary files and logs
+*.log
+tmp/
+temp/
+/data/
+/data_tests/
+/uploads/
+/outputs/
+
+# AI tooling (machine-specific)
+.gemini/
+.gemini-context/
+.antigravity/
+.superpowers/
+.mcp.json
+.claude/settings.json
+.claude/settings.local.json
+# Bespoke scripts and one-off utilities (underscore-prefixed)
+_*.py
+!_processing_worker.py
+!_pst_worker.py
+!_migration_flatten_pdfs.py
+_*.log
+_*.json
+
+# Case data — databases, spreadsheets, CSVs (NEVER commit)
+*.db
+*.db-wal
+*.db-journal
+*.csv
+*.xlsx
+*.xls
+
+# Scratchpad (working notes, test images, diagnostics)
+_scratchpad/
+
+# E2E test artifacts
+tests/e2e/screenshots/
+
+# Local deny-list for the PII guard hook
+.claude/hooks/pii_denylist.local.txt

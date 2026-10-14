@@ -1,0 +1,9 @@
+# Streamlit server configuration for DIY eDiscovery Hub
+# With background processing, WebSocket timeouts no longer affect job completion.
+
+[server]
+enableWebsocketCompression = true
+maxMessageSize = 200
+
+[runner]
+fastReruns = true

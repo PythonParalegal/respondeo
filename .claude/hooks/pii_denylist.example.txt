@@ -1,0 +1,8 @@
+# Optional local deny-list for precommit_pii_guard.py.
+# Copy to .claude/hooks/pii_denylist.local.txt (gitignored) and add terms
+# that are specific to your own environment and must never be committed,
+# e.g. internal hostnames, personal directory names, private project codes.
+# One Python regex per line. Prefix with (?i) for case-insensitive.
+#
+# (?i)\bmy-internal-host\b
+# C:\\Users\\myname

@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python .claude/hooks/trigger_injector.py --event UserPromptSubmit", "timeout": 5 }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|PowerShell|Edit|Write|MultiEdit|NotebookEdit|Task|Agent|Skill)$",
+        "hooks": [
+          { "type": "command", "command": "python .claude/hooks/trigger_injector.py --event PreToolUse", "timeout": 5 }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python .claude/hooks/session_refresher.py", "timeout": 5 }
+        ]
+      }
+    ]
+  }
+}

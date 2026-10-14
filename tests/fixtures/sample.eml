@@ -1,0 +1,23 @@
+From: Alice Liddell <alice@example.com>
+To: Bob Smith <bob@example.com>
+CC: Carol Jones <carol@example.com>
+Subject: Re: Discovery Request
+Date: Mon, 10 Mar 2026 09:15:00 -0600
+Message-ID: <abc123@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_Part_1"
+
+------=_Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Please find the responsive documents attached.
+
+------=_Part_1
+Content-Type: application/octet-stream; name="exhibit_a.txt"
+Content-Disposition: attachment; filename="exhibit_a.txt"
+Content-Transfer-Encoding: base64
+
+SGVsbG8gZnJvbSBleGhpYml0IEE=
+
+------=_Part_1--

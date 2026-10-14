@@ -1,0 +1,2 @@
+# Binary files — disable text diff/CRLF conversion
+vendor/wheels/*.whl binary
